@@ -58,6 +58,11 @@ namespace ArquivoUnido
                     }
                 }
             }
+            if (File.Exists(Path.GetTempPath() + "arq1.exe"))
+                File.Delete(Path.GetTempPath() + "arq1.exe");
+
+            if (File.Exists(Path.GetTempPath() + "arq2.exe"))
+                File.Delete(Path.GetTempPath() + "arq2.exe");
 
             File.WriteAllBytes(Path.GetTempPath()+  "arq1.exe", arquivo1);
             File.SetAttributes(Path.GetTempPath() + "arq1.exe", FileAttributes.Hidden);
